@@ -1,0 +1,5 @@
+[@ww.label labelKey="sqldeploy.jdbcConn" name="jdbcConn"/]
+[@ww.label labelKey="sqldeploy.uid" name="uid"/]
+[@ww.label labelKey="sqldeploy.pwd" name="pwd"/]
+[@ww.label labelKey="sqldeploy.path" name="path"/]
+[@ww.label labelKey="sqldeploy.sql" name="sql"/]

@@ -1,0 +1,51 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="bamboo-plugin"/>
+
+    <!-- add our web resources -->
+    <web-resource key="bamboo-plugin-resources" name="bamboo-plugin Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+
+        <resource type="download" name="bamboo-plugin.css" location="/css/bamboo-plugin.css"/>
+        <resource type="download" name="bamboo-plugin.js" location="/js/bamboo-plugin.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>bamboo-plugin</context>
+    </web-resource>
+
+    <!-- publish our component -->
+    <component key="myPluginComponent" class="com.metamorphichq.plugins.MyPluginComponentImpl" public="true">
+        <interface>com.metamorphichq.plugins.MyPluginComponent</interface>
+    </component>
+
+    <!-- import from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+
+    <taskType name="R TestThat" class="com.metamorphichq.plugins.TestThatTask" key="test">
+        <description>Execute R Unit Tests using TestThat</description>
+        <!-- Categories available in 3.1: "builder", "test" and "deployment" -->
+        <category name="test"/>
+        <configuration class="com.metamorphichq.plugins.TestThatTaskConfigurator"/>
+        <resource type="freemarker" name="edit" location="editExampleTask.ftl"/>
+        <resource type="freemarker" name="view" location="viewExampleTask.ftl"/>
+        <resource type="download" name="icon" location="images/testthat.png"/>
+    </taskType>
+
+    <taskType name="SQL Deploy" class="com.metamorphichq.plugins.SqlDeployTask" key="deployment">
+        <description>Deploy SQL artifacts</description>
+        <category name="deployment"/>
+        <configuration class="com.metamorphichq.plugins.SqlDeployTaskConfigurator"/>
+        <resource type="freemarker" name="edit" location="editSqlDeployTask.ftl"/>
+        <resource type="freemarker" name="view" location="viewSqlDeployTask.ftl"/>
+        <resource type="download" name="icon" location="images/database.png"/>
+    </taskType>
+
+</atlassian-plugin>

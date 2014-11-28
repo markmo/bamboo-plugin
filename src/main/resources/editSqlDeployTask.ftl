@@ -1,0 +1,5 @@
+[@ww.textfield labelKey="sqldeploy.jdbcConn" name="jdbcConn" required='false'/]
+[@ww.textfield labelKey="sqldeploy.uid" name="uid" required='false'/]
+[@ww.textfield labelKey="sqldeploy.pwd" name="pwd" required='false'/]
+[@ww.textfield labelKey="sqldeploy.path" name="path" required='false'/]
+[@ww.textarea labelKey="sqldeploy.sql" name="sql" required='false'/]
