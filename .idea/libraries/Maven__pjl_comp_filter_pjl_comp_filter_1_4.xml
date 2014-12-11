@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: pjl-comp-filter:pjl-comp-filter:1.4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/pjl-comp-filter/pjl-comp-filter/1.4/pjl-comp-filter-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/pjl-comp-filter/pjl-comp-filter/1.4/pjl-comp-filter-1.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/pjl-comp-filter/pjl-comp-filter/1.4/pjl-comp-filter-1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

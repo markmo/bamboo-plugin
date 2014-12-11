@@ -34,8 +34,9 @@
         <!-- Categories available in 3.1: "builder", "test" and "deployment" -->
         <category name="test"/>
         <configuration class="com.metamorphichq.plugins.TestThatTaskConfigurator"/>
-        <resource type="freemarker" name="edit" location="editExampleTask.ftl"/>
-        <resource type="freemarker" name="view" location="viewExampleTask.ftl"/>
+        <capabilityDefaultsHelper class=""/>
+        <resource type="freemarker" name="edit" location="editTestThatTask.ftl"/>
+        <resource type="freemarker" name="view" location="viewTestThatTask.ftl"/>
         <resource type="download" name="icon" location="images/testthat.png"/>
     </taskType>
 

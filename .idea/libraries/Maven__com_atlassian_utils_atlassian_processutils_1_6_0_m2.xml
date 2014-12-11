@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.atlassian.utils:atlassian-processutils:1.6.0-m2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/atlassian/utils/atlassian-processutils/1.6.0-m2/atlassian-processutils-1.6.0-m2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/atlassian/utils/atlassian-processutils/1.6.0-m2/atlassian-processutils-1.6.0-m2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/atlassian/utils/atlassian-processutils/1.6.0-m2/atlassian-processutils-1.6.0-m2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

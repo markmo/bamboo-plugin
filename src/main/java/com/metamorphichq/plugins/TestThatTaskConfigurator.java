@@ -23,6 +23,7 @@ public class TestThatTaskConfigurator extends AbstractTaskConfigurator {
         config.put("rscriptPath", params.getString("rscriptPath"));
         config.put("isTestThatFile", params.getString("isTestThatFile"));
         config.put("testPath", params.getString("testPath"));
+        config.put("workingDirPath", params.getString("workingDirPath"));
 
         return config;
     }
@@ -33,6 +34,7 @@ public class TestThatTaskConfigurator extends AbstractTaskConfigurator {
         context.put("rscriptPath", "/usr/local/bin");
         context.put("isTestThatFile", false);
         context.put("testPath", "tests");
+        context.put("workingDirPath", "");
     }
 
     @Override
@@ -42,6 +44,7 @@ public class TestThatTaskConfigurator extends AbstractTaskConfigurator {
         context.put("rscriptPath", taskDefinition.getConfiguration().get("rscriptPath"));
         context.put("isTestThatFile", taskDefinition.getConfiguration().get("isTestThatFile"));
         context.put("testPath", taskDefinition.getConfiguration().get("testPath"));
+        context.put("workingDirPath", taskDefinition.getConfiguration().get("workingDirPath"));
     }
 
     @Override
@@ -51,6 +54,7 @@ public class TestThatTaskConfigurator extends AbstractTaskConfigurator {
         context.put("rscriptPath", taskDefinition.getConfiguration().get("rscriptPath"));
         context.put("isTestThatFile", taskDefinition.getConfiguration().get("isTestThatFile"));
         context.put("testPath", taskDefinition.getConfiguration().get("testPath"));
+        context.put("workingDirPath", taskDefinition.getConfiguration().get("workingDirPath"));
     }
 
     @Override

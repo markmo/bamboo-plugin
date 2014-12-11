@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.teradata:tdgssconfig:15.00">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/teradata/tdgssconfig/15.00/tdgssconfig-15.00.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/teradata/tdgssconfig/15.00/tdgssconfig-15.00-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/teradata/tdgssconfig/15.00/tdgssconfig-15.00-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

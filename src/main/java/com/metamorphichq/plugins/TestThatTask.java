@@ -30,6 +30,9 @@ public class TestThatTask implements TaskType {
         String testPath = taskContext.getConfigurationMap().get("testPath");
         buildLogger.addBuildLogEntry("Test path: " + testPath);
 
+        String workingDirPath = taskContext.getConfigurationMap().get("workingDirPath");
+        buildLogger.addBuildLogEntry("Working Dir path: " + workingDirPath);
+
         TaskResultBuilder builder = TaskResultBuilder.newBuilder(taskContext);
 
         String temp = String.format("testresults%s.tap", System.currentTimeMillis());
@@ -44,10 +47,14 @@ public class TestThatTask implements TaskType {
 
         String content = null;
         if (!isRegularScript) {
+            String setwdCommand = "";
+            if (!workingDirPath.isEmpty()) {
+                setwdCommand = String.format("setwd(\"%s\");", workingDirPath);
+            }
             if (isFile) {
-                content = String.format("test_file(\"%s\", reporter=\"Tap\")", testPath);
+                content = String.format("%stest_file(\"%s\", reporter=\"Tap\")", setwdCommand, testPath);
             } else {
-                content = String.format("test_dir(\"%s\", reporter=\"Tap\")", testPath);
+                content = String.format("%stest_dir(\"%s\", reporter=\"Tap\")", setwdCommand, testPath);
             }
             buildLogger.addBuildLogEntry(content);
         }
